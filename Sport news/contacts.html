@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPORTNEWS — Контакты</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Стили -->
+  <link rel="stylesheet" href="sport.css">
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <header>
+    <div class="container menu">
+      <div class="logo">SPORT<span>NEWS</span></div>
+      <nav class="links">
+        <a href="index.html">Главная</a>
+        <a href="sport.html">Все новости</a>
+        <a href="register.html">Регистрация</a>
+        <a href="contacts.html" style="color:#F2A900">Контакты</a>
+        <a href="about.html">О нас</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container my-4">
+
+    <div class="contact-info mb-3">
+      <h3>Свяжитесь с нами</h3>
+    </div>
+
+    <section class="contact-box row g-4 align-items-start m-0">
+      <!-- Контактные данные -->
+      <div class="contact-info col-md-5">
+        <h2>Контакты редакции</h2>
+        <p>г. Астана, пр. Мангилик Ел, 55</p>
+        <p><a href="tel:+77172000000">+7 (7172) 00-00-00</a></p>
+        <p><a href="mailto:info@sportnews.kz">info@sportnews.kz</a></p>
+      </div>
+
+      <!-- Task 0, 1, 2: Форма обратной связи -->
+      <div class="col-md-7">
+        <div class="custom-form-card">
+          <form id="contactForm" class="needs-validation" novalidate>
+            <h2 class="mb-3">Обратная связь</h2>
+            
+            <!-- Имя -->
+            <div class="mb-3">
+              <label for="userName" class="form-label">Ваше имя *</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="userName" 
+                name="userName" 
+                placeholder="Введите имя" 
+                minlength="2" 
+                required>
+              <div class="form-text">Имя должно содержать минимум 2 символа.</div>
+              <div class="valid-feedback">Заполнено верно!</div>
+              <div class="invalid-feedback">Пожалуйста, введите имя (не менее 2 символов).</div>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="userEmail" class="form-label">Ваш Email *</label>
+              <input 
+                type="email" 
+                class="form-control" 
+                id="userEmail" 
+                name="userEmail" 
+                placeholder="email@example.com" 
+                required>
+              <div class="form-text">Мы не передаем ваш email третьим лицам.</div>
+              <div class="valid-feedback">Заполнено верно!</div>
+              <div class="invalid-feedback">Введите корректный адрес электронной почты.</div>
+            </div>
+
+            <!-- Сообщение -->
+            <div class="mb-3">
+              <label for="userMessage" class="form-label">Сообщение *</label>
+              <textarea 
+                class="form-control" 
+                id="userMessage" 
+                name="userMessage" 
+                rows="4" 
+                placeholder="Напишите ваше сообщение..." 
+                minlength="10" 
+                maxlength="500" 
+                required></textarea>
+              <div class="form-text">Длина сообщения — от 10 до 500 символов.</div>
+              <div class="valid-feedback">Заполнено верно!</div>
+              <div class="invalid-feedback">Сообщение должно содержать от 10 до 500 символов.</div>
+            </div>
+
+            <button class="button active btn btn-warning w-100 mt-2" type="submit">Отправить сообщение</button>
+          </form>
+          
+          <div id="contactSuccessMsg" class="alert alert-success mt-3 d-none" role="alert">
+            Спасибо! Ваше сообщение успешно отправлено.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция FAQ -->
+    <section class="section my-5">
+      <div class="section-title mb-3">
+        <div class="color" style="background:#F2A900"></div>
+        <h2>Частые вопросы</h2>
+      </div>
+
+      <div class="faq-grid">
+        <details class="card faq-item p-3 mb-2">
+          <summary class="fw-bold">Как предложить новость?</summary>
+          <p class="mt-2 mb-0">Отправьте её через форму обратной связи или на наш email.</p>
+        </details>
+        <details class="card faq-item p-3 mb-2">
+          <summary class="fw-bold">Как стать автором?</summary>
+          <p class="mt-2 mb-0">Пришлите резюме и примеры статей на почту.</p>
+        </details>
+        <details class="card faq-item p-3 mb-2">
+          <summary class="fw-bold">Где таблицы?</summary>
+          <p class="mt-2 mb-0">Турнирные таблицы доступны на странице «Все новости».</p>
+        </details>
+        <details class="card faq-item p-3 mb-2">
+          <summary class="fw-bold">Использование материалов</summary>
+          <p class="mt-2 mb-0">Разрешено только со ссылкой на наш сайт.</p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container menu py-3 text-center">
+      <div class="logo" style="font-size:14px; color:#777C8C">© 2026 SPORTNEWS Arsen Azamat Islam Kasym</div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Валидация Bootstrap (Task 2) -->
+  <script>
+    (() => {
+      'use strict';
+
+      const form = document.getElementById('contactForm');
+      const successAlert = document.getElementById('contactSuccessMsg');
+
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+          successAlert.classList.add('d-none');
+        } else {
+          event.preventDefault();
+          successAlert.classList.remove('d-none');
+          form.reset();
+          form.classList.remove('was-validated');
+          return;
+        }
+
+        form.classList.add('was-validated');
+      }, false);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPORTNEWS — Регистрация</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="sport.css">
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <header>
+    <div class="container menu">
+      <div class="logo">SPORT<span>NEWS</span></div>
+      <nav class="links">
+        <a href="index.html">Главная</a>
+        <a href="sport.html">Все новости</a>
+        <a href="register.html" style="color:#F2A900">Регистрация</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="about.html">О нас</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="custom-form-card">
+          <h1 class="h3 mb-4 text-center">Регистрация читателя SPORTNEWS</h1>
+          
+          <form id="registrationForm" class="needs-validation" novalidate>
+            
+            <!-- First Name and Last Name -->
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label for="firstName" class="form-label">Имя *</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" minlength="2" required placeholder="Иван">
+                <div class="valid-feedback">Заполнено!</div>
+                <div class="invalid-feedback">Введите имя (минимум 2 символа).</div>
+              </div>
+              <div class="col-md-6">
+                <label for="lastName" class="form-label">Фамилия *</label>
+                <input type="text" class="form-control" id="lastName" name="lastName" minlength="2" required placeholder="Иванов">
+                <div class="valid-feedback">Заполнено!</div>
+                <div class="invalid-feedback">Введите фамилию (минимум 2 символа).</div>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="regEmail" class="form-label">Email адрес *</label>
+              <input type="email" class="form-control" id="regEmail" name="regEmail" required placeholder="user@domain.com">
+              <div class="valid-feedback">Корректный Email!</div>
+              <div class="invalid-feedback">Укажите валидный Email адрес.</div>
+            </div>
+
+            <!-- Passwords -->
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label for="password" class="form-label">Пароль *</label>
+                <input type="password" class="form-control" id="password" name="password" minlength="8" required placeholder="Минимум 8 символов">
+                <div class="form-text">Длина не менее 8 символов.</div>
+                <div class="invalid-feedback">Пароль должен содержать от 8 символов.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="confirmPassword" class="form-label">Подтверждение пароля *</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" minlength="8" required placeholder="Повторите пароль">
+                <div id="passwordMismatch" class="invalid-feedback">Пароли не совпадают!</div>
+              </div>
+            </div>
+
+            <!-- Gender (Radio Group inside fieldset and legend) -->
+            <fieldset class="mb-3">
+              <legend>Пол (опционально)</legend>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male">
+                <label class="form-check-label" for="genderMale">Мужской</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+                <label class="form-check-label" for="genderFemale">Женский</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="genderPreferNot" value="prefer_not" checked>
+                <label class="form-check-label" for="genderPreferNot">Не указывать</label>
+              </div>
+            </fieldset>
+
+            <!-- Hobbies or Interests (Checkboxes) -->
+            <fieldset class="mb-3">
+              <legend>Интересующие виды спорта</legend>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="sportFootball" value="football">
+                <label class="form-check-label" for="sportFootball">Футбол</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="sportHockey" value="hockey">
+                <label class="form-check-label" for="sportHockey">Хоккей</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="sportBasketball" value="basketball">
+                <label class="form-check-label" for="sportBasketball">Баскетбол</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="sportTennis" value="tennis">
+                <label class="form-check-label" for="sportTennis">Теннис</label>
+              </div>
+            </fieldset>
+
+            <!-- Country (Select dropdown) -->
+            <div class="mb-4">
+              <label for="country" class="form-label">Страна *</label>
+              <select class="form-select" id="country" name="country" required>
+                <option value="" selected disabled>-- Выберите страну --</option>
+                <option value="KZ">Казахстан</option>
+                <option value="UZ">Узбекистан</option>
+                <option value="KG">Кыргызстан</option>
+                <option value="OTHER">Другая страна</option>
+              </select>
+              <div class="invalid-feedback">Пожалуйста, выберите страну из списка.</div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex gap-3">
+              <button type="submit" class="button active btn btn-success flex-grow-1">Зарегистрироваться</button>
+              <button type="reset" id="resetBtn" class="btn btn-outline-secondary">Сбросить</button>
+            </div>
+
+          </form>
+
+          <!-- Success Demo Message -->
+          <div id="demoSuccessMessage" class="alert alert-success mt-4 d-none" role="alert">
+            <h4 class="alert-heading">Успешная регистрация!</h4>
+            <p>Демонстрация прошла успешно. Данные проверены валидацией и готовы к отправке.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container text-center">
+      <div class="logo" style="font-size:14px; color:#777C8C">© 2026 SPORTNEWS Arsen Azamat Islam Kasym</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    (() => {
+      'use strict';
+
+      const form = document.getElementById('registrationForm');
+      const password = document.getElementById('password');
+      const confirmPassword = document.getElementById('confirmPassword');
+      const successMessage = document.getElementById('demoSuccessMessage');
+      const resetBtn = document.getElementById('resetBtn');
+
+      // Проверка совпадения паролей в режиме реального времени
+      function validatePasswordMatch() {
+        if (password.value !== confirmPassword.value) {
+          confirmPassword.setCustomValidity('Пароли не совпадают');
+        } else {
+          confirmPassword.setCustomValidity('');
+        }
+      }
+
+      password.addEventListener('input', validatePasswordMatch);
+      confirmPassword.addEventListener('input', validatePasswordMatch);
+
+      // Обработка отправки
+      form.addEventListener('submit', event => {
+        validatePasswordMatch();
+
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+          successMessage.classList.add('d-none');
+        } else {
+          event.preventDefault();
+          successMessage.classList.remove('d-none');
+        }
+
+        form.classList.add('was-validated');
+      }, false);
+
+      // Обработка сброса формы (Reset button)
+      resetBtn.addEventListener('click', () => {
+        form.classList.remove('was-validated');
+        confirmPassword.setCustomValidity('');
+        successMessage.classList.add('d-none');
+        
+        const inputs = form.querySelectorAll('.form-control, .form-select');
+        inputs.forEach(input => {
+          input.classList.remove('is-valid', 'is-invalid');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
